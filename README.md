@@ -15,11 +15,6 @@
 
 ---
 
-## 🌍 Live Demo
-🔗 https://yourusername.pages.dev  
-*(Update with your real link after deploy)*
-
----
 
 ## ✨ Highlights
 - ⚡ Responsive & mobile-first
@@ -27,16 +22,25 @@
 - 🎨 Modern UI with smooth animations
 - 📊 Skills & project showcase
 - 📬 Form validation
-- 🚀 Optimized for performance & SEO
+- 🚀 Optimized
 
 ---
 
 ## 🛠 Tech Stack
 - HTML5
 - CSS3 (Flexbox, Grid)
-- Vanilla JavaScript
+- JavaScript
 - Deployed via Cloudflare Pages
 
 ---
 
 ## 📁 Project Structure
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── images/
+│   └── icons/
+└── README.md
