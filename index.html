@@ -3,11 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afandi | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>Afandi | Advanced Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+--bg:#0f172a;
+--text:#ffffff;
+--primary:#38bdf8;
+}
+
 *{
 margin:0;
 padding:0;
@@ -16,24 +21,170 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
+background:var(--bg);
+color:var(--text);
+transition:0.3s;
+}
+
+/* NAV */
+nav{
 display:flex;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-height:100vh;
+padding:20px 10%;
+background:#1e293b;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+/* MENU TOGGLE */
+.menu-toggle{
+display:none;
+cursor:pointer;
+font-size:24px;
+}
+
+/* SETTINGS PANEL */
+.settings{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+button{
+padding:8px 12px;
+border:none;
+border-radius:6px;
+background:var(--primary);
+color:black;
+cursor:pointer;
+}
+
+/* SECTIONS */
+section{
+padding:120px 10%;
+}
+
+.hero{
 text-align:center;
 }
 
-.container{
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
 padding:20px;
+border-radius:10px;
+width:250px;
 }
 
-h1{
-font-size:40px;
-margin-bottom:10px;
+/* DARK / LIGHT */
+.light-mode{
+--bg:#f1f5f9;
+--text:#000000;
+--primary:#2563eb;
 }
 
+@media(max-width:768px){
+nav ul{
+display:none;
+flex-direction:column;
+background:#1e293b;
+position:absolute;
+top:70px;
+right:10%;
+padding:10px;
+}
+
+.menu-toggle{
+display:block;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div><strong>AFANDI</strong></div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<h1>Welcome 🚀</h1>
+<p>Advanced Portfolio with Menu & Settings</p>
+</section>
+
+<section id="about">
+<h2>About</h2>
+<p>Frontend Developer</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="cards">
+<div class="card">Project 1</div>
+<div class="card">Project 2</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: example@mail.com</p>
+</section>
+
+<div class="settings">
+<button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<script>
+function toggleMenu(){
+var menu=document.getElementById("menu");
+if(menu.style.display==="flex"){
+menu.style.display="none";
+}else{
+menu.style.display="flex";
+}
+}
+
+function toggleTheme(){
+document.body.classList.toggle("light-mode");
+}
+</script>
+
+</body>
+</html>
 p{
 opacity:0.8;
 margin-bottom:20px;
