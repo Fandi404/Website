@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afandi | Advanced Portfolio</title>
+<title>New Project | Afandi</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -18,6 +18,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -28,12 +29,116 @@ transition:0.3s;
 
 /* NAV */
 nav{
+position:fixed;
+width:100%;
+top:0;
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:20px 10%;
 background:#1e293b;
-position:fixed;
+z-index:999;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero span{
+color:var(--primary);
+}
+
+/* BUTTON */
+.btn{
+padding:12px 25px;
+background:var(--primary);
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+padding:100px 10%;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+width:250px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:0.7;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div><strong>AFANDI</strong></div>
+<div>
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<h1>🚀 Welcome To <span>New Project</span></h1>
+<p>Modern Template For Future Projects</p>
+<button class="btn" onclick="alert('Start Building!')">Get Started</button>
+</section>
+
+<section id="projects" class="cards">
+<div class="card">Project A</div>
+<div class="card">Project B</div>
+<div class="card">Project C</div>
+</section>
+
+<section id="about" style="text-align:center;padding:50px;">
+<h2>About This Project</h2>
+<p>Built with clean design and modern UI.</p>
+</section>
+
+<footer>
+© 2026 Afandi - All Rights Reserved
+</footer>
+
+</body>
+</html>
 width:100%;
 top:0;
 z-index:1000;
