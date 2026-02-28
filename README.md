@@ -1,6 +1,7 @@
 # Website
 
 
+
 <h1 align="center">Akun Newbie From INDONESIA +62</h1>
 <p align="center">
   <b>Building modern, responsive, and performance-web experiences.</b><br/>
@@ -15,8 +16,15 @@
 
 ---
 
+Open `index.html` in your browser.
 
-## ✨ Highlights
-- ⚡ Responsive & mobile-first
-- 🌙 Dark / Light mode
-- 🎨 Modern UI with smooth     animations
+---
+
+## 🚀 Deployment
+Connected to GitHub and auto-deployed via Cloudflare Pages (CI/CD ready).
+
+
+---
+
+## 📄 License
+MIT License © 2026 Afandi
