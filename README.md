@@ -1,7 +1,7 @@
 # Website
 
 
-<h1 align="center">Afandi — Frontend Developer</h1>
+<h1 align="center">Akun Newbie</h1>
 <p align="center">
   <b>Building modern, responsive, and performance-focused web experiences.</b><br/>
   HTML • CSS • JavaScript • Cloudflare Pages
